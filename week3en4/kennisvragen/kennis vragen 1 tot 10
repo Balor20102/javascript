@@ -1,0 +1,33 @@
+1. wat is "strict mode" in Javascript?
+    gaat stricter door de code heen
+
+2. waar in je script moet je "strict mode" activeren?
+    de alle eerste regel
+
+3. Waarom zou je strict mode in Javascript activeren?
+    code gaat er stricter door de code heen. 
+
+4. wat is een functie
+    een fucntie is een stukje code die je over en over kan gebruiken.
+
+5. wat is het verschil tussen een variabele en een functie?
+
+
+6. Wat is de "function body"? Geef een codevoorbeeld bij je uitleg.
+   
+    function myFunction(){
+        return functionbody;
+    }
+
+7. kies de juiste beschrijving bij het nummer.
+    1 b
+    2 c
+    3 d
+    4 d
+    5 e
+    6 a
+
+8. niks
+9. Cheese
+10. Cheese
+    Cheese

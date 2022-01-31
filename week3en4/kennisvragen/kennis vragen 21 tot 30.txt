@@ -1,0 +1,13 @@
+21.20
+
+22. met console.log
+
+23. undefined
+
+24. declaration is voor de = en expression is na de =
+25.
+26.
+27.
+28.
+29.
+30.
