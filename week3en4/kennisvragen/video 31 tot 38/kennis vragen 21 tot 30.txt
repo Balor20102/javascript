@@ -14,10 +14,15 @@
     }
     
 
-25. 
+25. de parameters zijn de namen die er aangeven wordt,
+en argumenten is de echte waarden.
 
-26.
+26. een compact manier voor de function expression.
+
 27.
+
 28.
-29.
-30.
+
+29. 5
+
+30. 8

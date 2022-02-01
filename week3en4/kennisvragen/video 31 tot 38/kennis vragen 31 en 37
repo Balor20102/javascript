@@ -1,5 +1,12 @@
-'use strict'
+31. 20
 
+32. Henk works as a Teacher and Henk is very Happy
+
+33. Frits works as a Developer and Frits is very happy
+
+34. Henk works as a Teacher and Henk is very undefined
+
+35. 
 const sentence = (name, job, state) => {
     const sentence = `${name} works as a ${job} and ${name} is very ${state}`;
     console.log(sentence);
@@ -9,3 +16,7 @@ const sentence = (name, job, state) => {
     console.log(sentence);
 
 sentence('Henk', 'Teacher');
+
+36. return geeft het antwoord terug naar console
+
+37. omdat return al print naar de console
