@@ -1,0 +1,42 @@
+1. een object kan een groep muteren en array kan er maar 1 muteren.
+
+2. is de variables naam in een object.
+
+3. value is de waarden.
+
+4. de naam en de waarden samen 
+
+5. een key is een property.
+
+6. 
+    a object
+    b key
+    c value
+    d key-value
+    e property
+
+7.
+
+8. Henk Henk
+
+9. de Vries
+
+10. undefined
+
+11. undefined
+
+12. Hello
+
+13. true
+
+14. Henk de Vries
+
+15.ƒ (){
+        return `${this.firstName} ${this.lastName}`;
+    }
+
+16.Henk de Vries
+
+17.22
+18.22
+    22

@@ -1,0 +1,108 @@
+1.
+
+2.
+    a for statement
+    b for statement
+    c initial value
+    d logical condition
+    e update
+    f code
+
+3.  0
+    1
+    2
+    3
+
+4.  0
+    0
+    1
+    2
+    2
+    4
+    3
+    6
+
+5.  0
+    2
+    4
+
+6. Niks
+
+7.  2
+    3
+
+8.  2
+    1
+    0
+
+9. 0
+   3
+   6
+   9
+   12
+
+10. Koe
+    Herder
+
+11.  Koe
+     Herder
+     undefined
+     undefined
+     undefined 
+
+12. tellen
+    tijd
+
+13.  gaat door met de code
+    let text = "";
+    for (let i = 0; i < 10; i++) {
+            if (i === 3) { continue; }
+            text += "The number is " + i + "<br>";
+    }
+
+14. de code stop daar,
+    let text = "";
+        for (let i = 0; i < 10; i++) {
+        if (i === 3) { break; }
+        text += "The number is " + i + "<br>";
+    }
+
+15. de while loop gaat alleen als de conditie waar is.
+
+16.
+let's start part 1!
+     Working on subpart 1!
+     Working on subpart 2!
+     Working on subpart 3!
+     Working on subpart 4!
+     Working on subpart 5!
+     /n
+     let's start part 2!
+     Working on subpart 1!
+     Working on subpart 2!
+     Working on subpart 3!
+     Working on subpart 4!
+     Working on subpart 5!
+     /n
+     let's start part 3!
+     Working on subpart 1!
+     Working on subpart 2!
+     Working on subpart 3!
+     Working on subpart 4!
+    Working on subpart 5!
+     /n
+
+17.
+Ik tel tot 10
+Ik tel tot 9
+Ik tel tot 8
+Ik tel tot 7
+Ik tel tot 6
+Ik tel tot 5
+Ik tel tot 4
+Ik tel tot 3
+Ik tel tot 2
+Ik tel tot 1
+Ik tel tot 0
+
+18.

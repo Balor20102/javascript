@@ -1,11 +1,11 @@
 'use strict'
 
-const sentence = (name, job, state) => {
-    const sentence = `${name} works as a ${job} and ${name} is very ${state}`;
-    console.log(sentence);
+let i = 10;
+while(i >= 0){
+    console.log(guus(i));
+    console.log(`Ik tel tot ${i}`);
+    i--;
 }
-const sentence = (name, job, state) => {
-    const sentence = `${name} works as a ${job} and ${name} is very ${state}`;
-    console.log(sentence);
-
-sentence('Henk', 'Teacher');
+function guus(i){
+    return `Ik tel tot ${i}`;
+}
