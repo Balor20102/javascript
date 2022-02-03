@@ -1,9 +1,11 @@
-var result = false;
+var result = false
 
-function Her (Name){
-    if (Name === 'Herder'){
-       result = true;
+function Big(number){
+
+    if (number >= 1000){
+        result = true;
     }
-    console.log(result);
+    console.log(result)
 }
-Her('Herder')
+
+Big(902)
