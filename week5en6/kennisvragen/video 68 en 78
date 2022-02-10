@@ -1,0 +1,33 @@
+1. DOM is a W3C (world wide web consortium) 
+   standard.
+
+2. Dom manipulation is het manipuleren
+    van elementen.
+
+3.  
+
+4. 
+
+5. querySelector linkt een html naar javascript.
+
+6. 
+7. A7
+
+8. A6 is een prachtige snelweg
+
+9. g.textContent is een prachtige snelweg
+
+10. NaN
+
+11. A6A6
+
+12. A6A6A3
+
+13. een button click
+    Animation
+
+14. 
+<button onclick=
+"document.getElementById('demo').innerHTML=Date()">The time is?</button>
+
+15.
