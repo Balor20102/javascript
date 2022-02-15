@@ -1,0 +1,1 @@
+console.log(document.getElementsByClassName('grid-container__item-1'),document.getElementsByClassName('grid-container__item-2'))
