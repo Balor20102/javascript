@@ -1,3 +1,3 @@
-let i = document.getElementsByClassName("grid-container__item-a");
+const i = document.getElementsByClassName("grid-container__item-a");
 
-[0].style.backgroundColor = "red";
+i[0].style.backgroundColor = "pink";
