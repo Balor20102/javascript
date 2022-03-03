@@ -1,0 +1,184 @@
+@media only screen and (max-width: 676px) {
+*{
+    padding: 0%;
+    margin: 0%;
+}
+
+/*--------------------------------------------------------------------*/
+/*----------grid-uppper-Section---------------------------------------*/
+/*--------------------------------------------------------------------*/
+
+.grid-container{
+    display: grid;
+    grid-template-rows:repeat(10, 30px) ;
+    grid-template-columns:repeat(5, 100px) ;
+    margin: 10px;
+    column-gap: 10px;
+}
+
+.grid-item{
+    border: solid black 1px;
+    padding-left: 20px;
+}
+
+.uppersection{
+    grid-row: 1/2;
+    grid-column: 1/4;
+}
+
+.player1{
+    grid-row: 1/2;
+    grid-column: 4/5;
+}
+
+.player2{
+    grid-row: 1/2;
+    grid-column: 5/6 ;
+}
+
+.Aces{
+    grid-row: 2/3;
+    grid-column: 1/4;
+}
+
+.Twos{
+    grid-row: 3/4;
+    grid-column: 1/4;
+}
+
+.Threes{
+    grid-row: 4/5;
+    grid-column: 1/4;
+}
+
+.Fours{
+    grid-row: 5/6;
+    grid-column: 1/4;
+}
+
+.Fives{
+    grid-row: 6/7;
+    grid-column: 1/4;
+}
+
+.Sixes{
+    grid-row: 7/8;
+    grid-column: 1/4;
+}
+
+.Total{
+    grid-row: 8/9;
+    grid-column: 1/4;
+}
+
+.bonus{
+    grid-row: 9/10;
+    grid-column: 1/4;
+}
+
+.totalUpper{
+    grid-row:10/11;
+    grid-column: 1/4;
+}
+/*--------------------------------------------------------------------*/
+/*----------grid-Lower-Section----------------------------------------*/
+/*--------------------------------------------------------------------*/
+
+.grid-Lower{
+    display: grid;
+    grid-template-rows:repeat(14, 30px) ;
+    grid-template-columns:repeat(5, 100px) ; 
+    margin: 10px;
+    column-gap: 10px;
+}
+
+
+/*--------------------------------------------------------------------*/
+/*----------grid-Lower-Section----------------------------------------*/
+/*--------------------------------------------------------------------*/
+
+.lowerSection{
+    grid-row: 1/2;
+    grid-column: 1/4;
+}
+
+.threeofakind{
+    grid-row: 2/3;
+    grid-column: 1/4;
+}
+
+.fourofakind{
+    grid-row: 3/4;
+    grid-column: 1/4 ;
+}
+
+.fullHouse{
+    grid-row: 4/5;
+    grid-column: 1/4;
+}
+
+.lowStraight{
+    grid-row: 5/6;
+    grid-column: 1/4;
+}
+
+.highStraight{
+    grid-row: 6/7;
+    grid-column: 1/4;
+}
+
+.yathzee{
+    grid-row: 7/8;
+    grid-column: 1/4;
+}
+
+.chance{
+    grid-row: 8/9;
+    grid-column: 1/4;
+}
+
+.yathzeebonus{
+    grid-row: 9/10;
+    grid-column: 1/4;
+}
+
+.totalLower{
+    grid-row: 10/11;
+    grid-column: 1/4;
+}
+
+.total-Upper{
+    grid-row: 11/12;
+    grid-column: 1/4;
+}
+
+.grandTotal{
+    grid-row:12/13;
+    grid-column: 1/4;
+}
+
+/*--------------------------------------------------------------------*/
+/*---------backje-----------------------------------------------------*/
+/*--------------------------------------------------------------------*/
+.bakje{
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    margin-left: 2%;
+    margin-top: 2%;
+    background-color: rgb(0, 124, 27);
+    clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
+    outline:solid brown 10px;
+}
+
+.bakjerand{
+    position: absolute;
+    width: 520px;
+    height: 520px;
+    left: 50%;
+    bottom: 25%;
+    background-color:brown ;
+    clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
+
+}
+}
