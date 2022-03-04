@@ -14,6 +14,8 @@
     grid-template-columns:repeat(5, 100px) ;
     margin: 10px;
     column-gap: 10px;
+    padding-top: 420px;
+    
 }
 
 .grid-item{
@@ -162,10 +164,10 @@
 /*--------------------------------------------------------------------*/
 .bakje{
     position: absolute;
-    width: 500px;
-    height: 500px;
-    margin-left: 2%;
-    margin-top: 2%;
+    width: 300px;
+    height: 300px;
+    margin-left: 3%;
+    margin-top: 3%;
     background-color: rgb(0, 124, 27);
     clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
     outline:solid brown 10px;
@@ -173,10 +175,10 @@
 
 .bakjerand{
     position: absolute;
-    width: 520px;
-    height: 520px;
-    left: 50%;
-    bottom: 25%;
+    width: 320px;
+    height: 320px;
+    left: 25%;
+    bottom: 50%;
     background-color:brown ;
     clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
 
