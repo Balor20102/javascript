@@ -5,6 +5,11 @@
     margin: 0%;
 }
 
+.Btn{
+    left: 60%;
+    width: 200px;
+}
+
 /*--------------------------------------------------------------------*/
 /*----------grid-uppper-Section---------------------------------------*/
 /*--------------------------------------------------------------------*/
@@ -12,7 +17,7 @@
 .grid-container{
     display: grid;
     grid-template-rows:repeat(10, 30px) ;
-    grid-template-columns:repeat(5, 100px) ;
+    grid-template-columns:repeat(4, 100px) ;
     margin: 10px;
     column-gap: 10px;
 }
@@ -88,7 +93,7 @@
 .grid-Lower{
     display: grid;
     grid-template-rows:repeat(14, 30px) ;
-    grid-template-columns:repeat(5, 100px) ; 
+    grid-template-columns:repeat(4, 100px) ; 
     margin: 10px;
     column-gap: 10px;
 }
@@ -176,10 +181,32 @@
     position: absolute;
     width: 430px;
     height: 430px;
-    left: 57%;
-    bottom: 25%;
+    left: 50%;
+    bottom: 31%;
     background-color:brown ;
     clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
 
 }
+
+/*--------------------------------------------------------------------*/
+/*----------dice------------------------------------------------------*/
+/*--------------------------------------------------------------------*/
+.container-dice{
+    width: 300px;
+    position: absolute;
+    left: 25%;
+    bottom: 5%;
+}
+
+.dices{
+    width: 100px;
+    padding: 10px;
+}
+
+.Btn{
+   width: 200px;
+   position: absolute;
+   left: 50%;
+}
+
 }

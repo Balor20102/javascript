@@ -56,6 +56,7 @@ function roll(){
 
     1000
     );
+   
 }
 
 /*-----------------------------*/
@@ -89,6 +90,8 @@ const dices = document.querySelectorAll('.dices').forEach((value, key) => {
 /*--------------------------------------------------------------------------------------------------------------------*/
 let gegooit1 = []
 
+let start = document.querySelector(".start");
+
 let Aces1 =     document.querySelector('.Aces1');
 let Twos1 =     document.querySelector(".Twos1");
 let Threes1 =   document.querySelector(".Threes1");
@@ -99,31 +102,19 @@ let TOTAL1 =    document.querySelector('.Total1')
 let bon1 =      document.querySelector('.bonus1');
 let totUp1 =    document.querySelector(".totalUpper1");
 
-let Aces2 =     document.querySelector('.Aces2');
-let Twos2 =     document.querySelector(".Twos2");
-let Threes2 =   document.querySelector(".Threes2");
-let Fours2 =    document.querySelector(".Fours2");
-let Fives2 =    document.querySelector(".Fives2");
-let Sixes2 =    document.querySelector(".Sixes2");
-let TOTAL2 =    document.querySelector('.Total2');
-let bon2 =      document.querySelector('.bonus2');
-let totUp2 =    document.querySelector(".totalUpper2");
+const Ace =     [Aces1];
+const Two =     [Twos1];
+const three =   [Threes1];
+const four =    [Fours1];
+const five =    [Fives1];
+const six =     [Sixes1];
+const total12 = [ TOTAL1];
+const bonus =   [ bon1];
+const totUp =   [ totUp1];
 
-const Ace =     [Aces1, Aces2];
-const Two =     [Twos1, Twos2];
-const three =   [Threes1, Threes2];
-const four =    [Fours1, Fours2];
-const five =    [Fives1, Fives2];
-const six =     [Sixes1, Sixes2];
-const total12 = [ TOTAL1, TOTAL2];
-const bonus =   [ bon1, bon2];
-const totUp =   [ totUp1, totUp2];
-
-let player = getRandomIntInclusive(0,1);
-console.log(player);
+let player = 0;
 let round = 0;
 
-BTN.addEventListener('click', players);
 
 Ace[player].addEventListener("click",Aces);
 Two[player].addEventListener("click",twos);
@@ -134,50 +125,27 @@ six[player].addEventListener("click",sixes);
 
 total12[player].addEventListener("click", total);
 
-/*-------------------------------------------------------*/
-/*---------player-------------------------------------*/
-/*-------------------------------------------------------*/
 
-function players(){
+/*-------------------------------------------------------*/
+/*---------functions-------------------------------------*/
+/*-------------------------------------------------------*/
+BTN.addEventListener('click', holdReset);
+
+
+function holdReset(){
     round++
 
-    if( player == 0){
-        document.querySelector(".player1").style.backgroundColor = "lightgreen";
-        document.querySelector(".player2").style.backgroundColor = "red";
-        console.log(player);
-        roundsPlayer1();
-    }
+    if(round == 3){
 
-    if( player == 1){
-        document.querySelector(".player2").style.backgroundColor = "lightgreen";
-        document.querySelector(".player1").style.backgroundColor = "red";
-        console.log(player);
-        roundsPlayer2();
+        document.querySelectorAll('.dices').forEach((value) => {
+            value.style.backgroundColor = "green";
+            vastHoud.fill("");     
+            doOneRoll();
+        });
+
+        round = 0;
     }
 }
-
-function roundsPlayer1 (){
-
-    if (round == 3){
-
-        if( player == 0){
-            player = 1;
-
-            round = 0;
-        }
-    }
-}
-
- function roundsPlayer2 (){  
-    if (round == 2){  
-        if( player == 1){
-            player = 0;
-
-            round = 0;
-        }
-    }
-}
-
 
 /*-------------------------------------------------------*/
 /*---------functions-------------------------------------*/
@@ -287,6 +255,12 @@ let total1 = 0;
 
     totUp[player].innerHTML = total1  
     totUp[player].style.backgroundColor = "lightgreen"
+
+    totalUpper[player].innerHTML = total1;
+    totalUpper[player].style.backgroundColor = "lightgreen";
+
+    upper = total1;
+    return upper
 }
 
 /* ----------------------------delete-----------------------------*/
@@ -318,16 +292,310 @@ function sixesRemove(){
 /*--------------------------------------------------------------------------------------------------------------------*/
 /*---------antwooden---lowersection-----------------------------------------------------------------------------------*/
 /*--------------------------------------------------------------------------------------------------------------------*/
-/*
-let kind31 = ;
-let kind41 = ;
-let fullhouse1 = ;
-let lowStraight1 = ;
-let highStraight1 = ; 
-let yathzee1 = ;
-let chance1 = ;
-let yathzeeBonus1 = ;
-let totalLow1 = ;
-let totalUpper1 = ;
-let grandTotal1 = ;
-*/
+
+let kind31 = document.querySelector(".threeofakind1");
+let kind41 = document.querySelector(".fourofakind1");
+let fullhouse1 = document.querySelector(".fullHouse1");
+let lowStraight1 = document.querySelector(".lowStraight1");
+let highStraight1 = document.querySelector(".highStraight1"); 
+let yathzee1 = document.querySelector(".yathzee1");
+let chance1 = document.querySelector(".chance1");
+let yathzeeBonus1 = document.querySelector(".yathzeebonus1");
+let totalLow1 = document.querySelector(".totalLower1");
+let totalUpper1 = document.querySelector(".total-Upper1");
+let grandTotal1 = document.querySelector(".grandTotal1");
+
+let kind3 =         [kind31];
+let kind4 =         [kind41];
+let fullhouse =     [fullhouse1];
+let lowStraight =   [ lowStraight1];
+let highStraight =  [ highStraight1];
+let yathzee =       [yathzee1];
+let chance =        [ chance1];
+let yathzeeBonus =  [ yathzeeBonus1];
+let totalLow =      [totalLow1];
+let totalUpper =    [ totalUpper1];
+let grandTotal =    [grandTotal1];
+
+let gegooit2 = [];
+let upper = 0;
+let lower = 0;
+let grand = [];
+
+kind3[player].addEventListener('click', threeofkind);
+kind4[player].addEventListener('click', fourofkind);
+fullhouse[player].addEventListener('click', house);
+lowStraight[player].addEventListener('click',lowStreet);
+highStraight[player].addEventListener('click',highStreet);
+yathzee[player].addEventListener('click', yath);
+chance[player].addEventListener('click', chances);
+totalLow[player].addEventListener('click', lowerCase)
+
+/*-------------------------------------------------------*/
+/*---------functions-------------------------------------*/
+/*-------------------------------------------------------*/
+
+
+function threeofkind (){
+    for(let i = 0; i <= 6; i++){
+
+        let amountsame = 0;
+        for(let j = 0; j <5; j++){
+            if (i == dobbels[j]){
+                amountsame++;
+            }
+        }
+        if (amountsame == 3){
+            let out = 0;
+
+            for(let x = 0; x < 5; x++){
+                out += dobbels[x];
+                console.log(out)
+                gegooit2[0] = out;
+                kind3[player].innerHTML = out;
+                kind3[player].style.backgroundColor = "lightgreen";
+                removeAddkind3();
+
+            }
+        } 
+    }
+}
+
+function removeAddkind3(){
+    kind3[player].removeEventListener("click",threeofkind);
+}
+
+
+/*---------------------------------*/
+/*---------four of a kind----------*/
+/*---------------------------------*/
+function fourofkind (){
+    for(let i = 0; i <= 6; i++){
+
+        let amountsame = 0;
+        for(let j = 0; j <5; j++){
+            if (i == dobbels[j]){
+                amountsame++;
+            }
+        }
+        if (amountsame == 4){
+            let out = 0;
+
+            for(let x = 0; x < 5; x++){
+                out += dobbels[x];
+                console.log(out)
+                gegooit2[1] = out;
+                kind4[player].innerHTML = out;
+                kind4[player].style.backgroundColor = "lightgreen";
+                removeAddkind4();
+
+            }
+        } 
+    }
+}
+
+function removeAddkind4(){
+    kind4[player].removeEventListener("click",fourofkind);
+}
+
+
+/*---------------------------------*/
+/*---------full house--------------*/
+/*---------------------------------*/
+function house (){
+    let threeFound = Boolean(false);
+    for(let i = 0; i <= 6; i++){
+
+        let amountsame = 0;
+        for(let j = 0; j <5; j++){
+            if (i == dobbels[j]){
+                amountsame++;
+            }
+        }
+        if (amountsame == 3){
+            threeFound = true;
+
+        } 
+    }
+
+    let twoFound = Boolean(false);
+    for(let i = 0; i <= 6; i++){
+
+        let amountsame = 0;
+        for(let j = 0; j <5; j++){
+            if (i == dobbels[j]){
+                amountsame++;
+            }
+        }
+        if (amountsame == 2){
+            twoFound = true;
+
+        } 
+    }
+
+    if( threeFound && twoFound){
+        gegooit2[2] = 25;
+        fullhouse[player].innerHTML = 25;
+        fullhouse[player].style.backgroundColor = "lightgreen";
+        removeHouse();
+    }
+
+}
+
+function removeHouse(){
+    fullhouse[player].removeEventListener("click",house);
+}
+
+
+/*---------------------------------*/
+/*---------low straight------------*/
+/*---------------------------------*/
+function lowStreet(){
+ let selection = new Array(6);
+
+ for( let i = 0; i < 5; i++){
+     let waarde = dobbels[i];
+     selection[waarde-1] = 1;
+ }
+
+ let street = Boolean(false);
+ let amountOneBehind = 0;
+    for(let i = 0;  i < 6; i++){
+        if(selection[i]== 1){
+            amountOneBehind++
+        }else{
+            amountOneBehind = 0;
+        }
+
+        if (amountOneBehind >= 4 ){
+            street = true;
+        }
+    }
+
+    if(street){
+        gegooit2[3] = 30;
+        lowStraight[player].innerHTML = 30;
+        lowStraight[player].style.backgroundColor = "lightgreen";
+        removeLowStreet();
+    }
+}
+
+function removeLowStreet(){
+    lowStraight[player].removeEventListener('click',lowStreet);
+}
+
+/*---------------------------------*/
+/*---------high straight------------*/
+/*---------------------------------*/
+function highStreet(){
+    let selection = new Array(6);
+   
+    for( let i = 0; i < 5; i++){
+        let waarde = dobbels[i];
+        selection[waarde-1] = 1;
+    }
+   
+    let street = Boolean(false);
+    let amountOneBehind = 0;
+       for(let i = 0;  i < 6; i++){
+           if(selection[i]== 1){
+               amountOneBehind++
+           }else{
+               amountOneBehind = 0;
+           }
+   
+           if (amountOneBehind >= 5 ){
+               street = true;
+           }
+       }
+   
+       if(street){
+           gegooit2[3] = 40;
+           highStraight[player].innerHTML = 40;
+           highStraight[player].style.backgroundColor = "lightgreen";
+           removeHighStreet();
+       }
+   }
+   
+   function removeHighStreet(){
+       highStraight[player].removeEventListener('click',highStreet);
+   }
+
+   
+/*---------------------------------*/
+/*---------yathzee------------*/
+/*---------------------------------*/
+
+function yath (){
+    for(let i = 0; i <= 6; i++){
+
+        let amountsame = 0;
+        for(let j = 0; j <5; j++){
+            if (i == dobbels[j]){
+                amountsame++;
+            }
+        }
+        if (amountsame == 5){
+
+                gegooit2[4] = 50;
+                yathzee[player].innerHTML = 50;
+                yathzee[player].style.backgroundColor = "lightgreen";
+                removeYathzee();
+
+                yathzeeBonus[player].innerHTML = 100;
+                yathzeeBonus[player].style.backgroundColor = "lightgreen";
+                gegooit2[6];
+
+        } 
+    }
+}
+
+function removeYathzee(){
+    kind4[player].removeEventListener("click",fourofkind);
+}
+
+/*---------------------------------*/
+/*---------chance------------------*/
+/*---------------------------------*/
+
+function chances(){
+    let out = 0;
+    for(let x = 0; x < 5; x++){
+        out += dobbels[x];
+        gegooit2[5] = out;
+        chance[player].innerHTML = out;
+        chance[player].style.backgroundColor = "lightgreen";
+    }
+    removeChance();
+}
+
+function removeChance(){
+    chance[player].addEventListener('click', chances);
+} 
+
+/*---------------------------------*/
+/*---------upper-------------------*/
+/*---------------------------------*/
+function lowerCase(){
+
+let total2 = 0;
+    for( let i = 0; i <= 5; i++){
+         total2 += gegooit2[i];
+         
+         console.log( total2)
+
+    }
+    totalLow[player].innerHTML = total2;
+    totalLow[player].style.backgroundColor = "lightgreen";
+    
+    lower = total2;
+    total();
+
+    grand = upper + lower;
+    console.log(upper);
+
+    grandTotal[player].innerHTML = grand;
+    grandTotal[player].style.backgroundColor = "lightgreen";
+}
+
+
