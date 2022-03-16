@@ -9,6 +9,11 @@
     width: 200px;
 }
 
+.roll{
+    position: absolute;
+    left: 70%;
+}
+
 .container-dice{
     width: 200px;
     height: 200px;

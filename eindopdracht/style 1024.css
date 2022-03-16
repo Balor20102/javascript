@@ -209,4 +209,9 @@
    left: 50%;
 }
 
+.roll{
+    position: absolute;
+    left: 70%;
+}
+
 }

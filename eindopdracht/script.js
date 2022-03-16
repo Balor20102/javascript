@@ -598,4 +598,22 @@ let total2 = 0;
     grandTotal[player].style.backgroundColor = "lightgreen";
 }
 
+/*----------------------*/
+/*-----------rollen-----*/
+/*----------------------*/
+ro = document.querySelector('.roll');
 
+BTN.addEventListener('click',rollen)
+
+let rolllen = 3;
+function rollen(){
+
+    rolllen -= 1;
+    ro.innerHTML = rolllen
+
+
+     if(rolllen == 1){
+         rolllen = 4;
+
+     }
+}
